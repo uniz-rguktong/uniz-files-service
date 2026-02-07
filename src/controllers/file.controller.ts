@@ -17,11 +17,7 @@ const prisma = new PrismaClient();
 
 import axios from "axios";
 
-const GATEWAY_URL =
-  process.env.GATEWAY_URL ||
-  (process.env.NODE_ENV === "production"
-    ? "https://uniz-gateway.vercel.app/api/v1"
-    : "http://localhost:3000/api/v1");
+const GATEWAY_URL = process.env.GATEWAY_URL || "http://localhost:3000/api/v1";
 
 export const downloadAttendanceTemplate = async (
   req: AuthenticatedRequest,
