@@ -9,7 +9,8 @@
     "dev": "ts-node src/index.ts",
     "prisma:generate": "prisma generate",
     "vercel-build": "prisma generate",
-    "postinstall": "if [ -f prisma/schema.prisma ]; then npx prisma generate; fi"
+    "postinstall": "if [ -f prisma/schema.prisma ]; then npx prisma generate; fi",
+    "redeploy": "bash redeploy.sh"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
